@@ -1,0 +1,57 @@
+const countries = [
+    {
+        continent:'China',
+        population:1439323776,
+        capital:'Beijing',
+        currency:'renminbi',
+        continent:'Asia',
+    },
+    {
+        continent:'India',
+        population:1380004385,
+        capital:'New Delhi',
+        currency:'Indian Rupee',
+        continent:'Asia',
+    },
+    {
+        continent:'Afghanistan',
+        population:40427590,
+        capital:'Kabul',
+        currency:'Afghan afghani',
+        continent:'Asia',
+    },
+    {
+        continent:'United States of America',
+        population:318636000 ,
+        capital:' Washington DC',
+        currency:'US Dollars',
+        continent:'North America',
+    },
+    {
+        continent:'Ecuador',
+        population:170843 ,
+        capital:'Quito',
+        currency:'US Dollars',
+        continent:'South America',
+    },
+]
+
+
+const continent = countries.filter((asia)=>{
+    return asia.continent === "Asia"
+})
+console.log(continent);
+
+const countrie = countries.filter(lessPop =>{
+    return lessPop.population < 200000
+})
+console.log(countrie);
+
+const pop = countries.reduce((acc, cur)=>{
+    return  acc.population + cur.population
+})
+console.log(pop);
+const curr = countries.filter((asia)=>{
+    return asia.currency === "US Dollars"
+})
+console.log(curr);
